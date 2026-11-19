@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0f1b2d">
 <title>Uganda Bank Fees 2025–2026: 8 Banks Compared</title>
-<meta name="description" content="Infographic comparing tariffs of Stanbic, Equity, Absa, Centenary, KCB, I&M, NCBA and Exim Bank Uganda, covering monthly fees, ATM, EFT/RTGS and online card costs, with category winners and sources.">
+<meta name="description" content="Infographic comparing tariffs of Stanbic, Equity, Absa, Centenary, KCB, I&M, NCBA and Exim Bank Uganda, covering monthly fees, ATM, EFT/RTGS and online card costs, with filters, category winners and sources.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -15,40 +16,42 @@
   --gold:#d9a321; --gold-soft:#fbf1d6;
   --green:#1f8a5b; --green-soft:#e2f4ea;
   --red:#c2412d; --red-soft:#fbe6e1;
-  --blue:#2f6fd6; --blue-soft:#e4edfb;
+  --blue:#2f6fd6;
   --stanbic:#0033a1; --equity:#a32a29; --absa:#dc0032; --cente:#00843d;
   --kcb:#00a54f; --im:#e31e24; --ncba:#7a6a45; --exim:#1d4f91;
-  --r:16px;
+  --r:16px; --nav-h:46px;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55;font-size:16px}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55;font-size:16px;overflow-x:hidden}
 a{color:var(--blue)}
 .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
-h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.15;margin:0}
-h2{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:6px}
-.kicker{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--gold)}
-.lead{color:var(--muted);max-width:760px;margin:6px 0 28px}
-section{padding:56px 0;border-bottom:1px solid var(--line)}
-.num{font-variant-numeric:tabular-nums}
+h1,h2,h3,h4{font-family:Fraunces,Georgia,serif;line-height:1.15;margin:0}
+h2{font-size:clamp(1.5rem,3vw,2.2rem);margin-bottom:6px}
+.kicker{font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--gold)}
+.lead{color:var(--muted);max-width:760px;margin:6px 0 24px}
+section{padding:52px 0;border-bottom:1px solid var(--line);scroll-margin-top:calc(var(--nav-h) + 8px)}
+code{font-size:.85em;background:#efe9dc;padding:1px 5px;border-radius:4px}
 
 /* nav */
-nav.top{position:sticky;top:0;z-index:20;background:rgba(15,27,45,.96);backdrop-filter:blur(6px)}
-nav.top .wrap{display:flex;gap:18px;align-items:center;overflow-x:auto;padding-top:10px;padding-bottom:10px;white-space:nowrap}
-nav.top a{color:#cdd6e4;text-decoration:none;font-size:.86rem;font-weight:500}
+nav.top{position:sticky;top:0;z-index:30;background:rgba(15,27,45,.97);backdrop-filter:blur(6px);height:var(--nav-h)}
+nav.top .wrap{display:flex;gap:18px;align-items:center;overflow-x:auto;height:100%;white-space:nowrap;scrollbar-width:none}
+nav.top .wrap::-webkit-scrollbar{display:none}
+nav.top a{color:#cdd6e4;text-decoration:none;font-size:.86rem;font-weight:500;padding:10px 0}
 nav.top a:hover{color:#fff}
 nav.top .brand{color:var(--gold);font-weight:700;margin-right:auto}
 
 /* hero */
-header.hero{background:radial-gradient(1200px 500px at 85% -10%,#2b4a7a 0,transparent 60%),var(--ink);color:#fff;padding:72px 0 64px}
-header.hero h1{font-size:clamp(2.2rem,5.5vw,4rem);font-weight:800;max-width:900px}
+header.hero{background:radial-gradient(1200px 500px at 85% -10%,#2b4a7a 0,transparent 60%),var(--ink);color:#fff;padding:64px 0 64px}
+header.hero h1{font-size:clamp(2rem,5.5vw,4rem);font-weight:800;max-width:900px}
 header.hero h1 em{font-style:normal;color:var(--gold)}
-header.hero p.sub{color:#c3cede;max-width:720px;font-size:1.08rem;margin:18px 0 34px}
+header.hero p.sub{color:#c3cede;max-width:720px;font-size:1.06rem;margin:16px 0 30px}
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
 .stat{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--r);padding:18px}
-.stat b{display:block;font-family:Fraunces,serif;font-size:2rem;color:var(--gold)}
-.stat span{font-size:.88rem;color:#c3cede}
-.meta{margin-top:26px;font-size:.82rem;color:#93a2b8}
+.stat b{display:block;font-family:Fraunces,serif;font-size:1.9rem;color:var(--gold)}
+.stat span{font-size:.86rem;color:#c3cede}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.meta{margin-top:20px;font-size:.8rem;color:#93a2b8}
 
 /* notice */
 .notice{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:-34px;position:relative}
@@ -56,66 +59,103 @@ header.hero p.sub{color:#c3cede;max-width:720px;font-size:1.08rem;margin:18px 0 
 .note h3{font-size:1.05rem;margin-bottom:4px}
 .note p{margin:0;font-size:.9rem;color:var(--muted)}
 
+/* buttons */
+.btn{appearance:none;border:1px solid var(--ink);background:transparent;color:var(--ink);padding:8px 14px;border-radius:999px;font:600 .8rem Inter,sans-serif;cursor:pointer;min-height:36px}
+.btn:hover{background:var(--ink);color:#fff}
+.btn.solid{background:var(--gold);border-color:var(--gold);color:var(--ink);padding:12px 22px;font-size:.95rem;text-decoration:none;display:inline-flex;align-items:center}
+.btn.solid:hover{background:#c08e14}
+.btn.ghost-light{border-color:rgba(255,255,255,.4);color:#fff;padding:12px 22px;font-size:.95rem;text-decoration:none;display:inline-flex;align-items:center}
+.btn.ghost-light:hover{background:#fff;color:var(--ink)}
+
+/* ===== FILTER BAR ===== */
+#compare-zone{position:relative}
+.filterbar{position:sticky;top:var(--nav-h);z-index:25;background:rgba(247,244,238,.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);box-shadow:0 6px 18px rgba(15,27,45,.06)}
+.fb-toggle{display:none}
+.fb-inner{padding:14px 0;display:grid;gap:12px}
+.fb-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.fb-label{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;color:var(--muted);margin-right:4px;min-width:72px}
+.chip{appearance:none;border:1.5px solid var(--line);background:#fff;color:var(--ink);border-radius:999px;padding:7px 12px;font:600 .82rem Inter,sans-serif;cursor:pointer;display:inline-flex;align-items:center;gap:7px;min-height:36px;transition:.15s}
+.chip .dot{width:10px;height:10px;border-radius:50%;background:var(--c,#999);flex:none}
+.chip[aria-pressed="true"]{border-color:var(--ink);background:var(--ink);color:#fff}
+.chip.bk[aria-pressed="false"]{opacity:.55}
+.chip.bk[aria-pressed="false"] .dot{background:#bbb}
+.chip.link{border:none;background:none;color:var(--blue);text-decoration:underline;padding:7px 6px}
+.fb-controls{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.switch{display:inline-flex;align-items:center;gap:8px;font-size:.85rem;font-weight:600;cursor:pointer;min-height:36px}
+.switch input{appearance:none;width:38px;height:22px;border-radius:999px;background:#cfc8b9;position:relative;cursor:pointer;transition:.2s;margin:0}
+.switch input:before{content:"";position:absolute;width:18px;height:18px;border-radius:50%;background:#fff;top:2px;left:2px;transition:.2s}
+.switch input:checked{background:var(--green)}
+.switch input:checked:before{left:18px}
+.select{display:inline-flex;align-items:center;gap:8px;font-size:.85rem;font-weight:600}
+.select select{font:500 .85rem Inter,sans-serif;padding:7px 10px;border-radius:10px;border:1.5px solid var(--line);background:#fff;min-height:36px}
+.fb-status{font-size:.82rem;color:var(--muted);margin-left:auto}
+.fb-status b{color:var(--ink)}
+
 /* charts */
 .charts{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-.chart{background:var(--card);border-radius:var(--r);padding:22px;border:1px solid var(--line)}
+.chart{background:var(--card);border-radius:var(--r);padding:22px;border:1px solid var(--line);min-width:0}
 .chart h3{font-size:1.15rem}
 .chart .cap{font-size:.84rem;color:var(--muted);margin:4px 0 16px}
-.bar{display:grid;grid-template-columns:96px 1fr 92px;align-items:center;gap:10px;margin:9px 0;font-size:.9rem}
-.bar .lbl{font-weight:600}
+.bar{display:grid;grid-template-columns:96px 1fr 84px;align-items:center;gap:10px;margin:9px 0;font-size:.9rem}
+.bar .lbl{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .bar .track{background:#f1ede4;border-radius:6px;height:22px;overflow:hidden}
-.bar .fill{height:100%;border-radius:6px;background:var(--c,#999);min-width:4px}
+.bar .fill{height:100%;border-radius:6px;background:var(--c,#999);min-width:4px;transition:width .4s ease}
 .bar .val{text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
 .bar.zero .val{color:var(--green)}
+.bar.na .val{color:var(--muted);font-weight:500;font-size:.8rem}
+.bar.na .fill{display:none}
+.bar.best .lbl:after{content:" ★";color:var(--gold)}
 .legend-note{font-size:.78rem;color:var(--muted);margin-top:12px;border-top:1px dashed var(--line);padding-top:10px}
+.empty{padding:24px;text-align:center;color:var(--muted);background:var(--card);border:1px dashed var(--line);border-radius:var(--r)}
 
 /* table */
-.table-wrap{overflow-x:auto;background:var(--card);border-radius:var(--r);border:1px solid var(--line)}
-table{border-collapse:collapse;width:100%;min-width:980px;font-size:.88rem}
+.table-wrap{background:var(--card);border-radius:var(--r);border:1px solid var(--line);overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.88rem}
 th,td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
-thead th{background:var(--ink);color:#fff;font-weight:600;font-size:.8rem;letter-spacing:.03em;position:sticky;top:0}
+thead th{background:var(--ink);color:#fff;font-weight:600;font-size:.8rem;letter-spacing:.03em}
+thead th button{all:unset;cursor:pointer;display:inline-flex;gap:4px;align-items:center}
+thead th button:after{content:"↕";opacity:.5;font-size:.8em}
+thead th button[data-active="true"]:after{content:"↑";opacity:1;color:var(--gold)}
 tbody tr:nth-child(even){background:#fbf9f5}
-td b{font-variant-numeric:tabular-nums}
 .bank-dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:8px;vertical-align:middle}
+td small{color:var(--muted)}
 
 /* bank cards */
-.banks{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:20px}
+.banks{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px}
 .bank{background:var(--card);border-radius:var(--r);border:1px solid var(--line);overflow:hidden;display:flex;flex-direction:column}
 .bank .head{padding:18px 20px;color:#fff;background:var(--c)}
-.bank .head h3{font-size:1.35rem}
+.bank .head h3{font-size:1.3rem}
 .bank .head small{opacity:.85;font-size:.8rem}
+.bank .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.bank .tags span{font-size:.7rem;font-weight:700;background:rgba(255,255,255,.18);padding:2px 8px;border-radius:999px}
 .bank .body{padding:18px 20px;flex:1}
 .kv{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
 .kv div{background:#f7f4ee;border-radius:10px;padding:10px}
-.kv span{display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600}
-.kv b{font-size:1.02rem;font-variant-numeric:tabular-nums}
+.kv span{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600}
+.kv b{font-size:1rem;font-variant-numeric:tabular-nums}
 .pros,.cons{list-style:none;padding:0;margin:8px 0;font-size:.9rem}
 .pros li,.cons li{padding-left:24px;position:relative;margin:6px 0}
 .pros li:before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:800}
 .cons li:before{content:"!";position:absolute;left:4px;color:var(--red);font-weight:800}
-.bank .foot{padding:12px 20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:.8rem;background:#fcfbf8}
+.bank .foot{padding:12px 20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:.8rem;background:#fcfbf8;flex-wrap:wrap}
+.bank .foot a{font-weight:600;font-size:.8rem}
 .badge{display:inline-block;font-size:.72rem;font-weight:700;padding:3px 8px;border-radius:999px}
 .badge.ok{background:var(--green-soft);color:var(--green)}
 .badge.warn{background:var(--gold-soft);color:#8a6410}
-.btn{appearance:none;border:1px solid var(--ink);background:transparent;color:var(--ink);padding:6px 12px;border-radius:999px;font:600 .78rem Inter,sans-serif;cursor:pointer}
-.btn:hover{background:var(--ink);color:#fff}
-.btn.solid{background:var(--gold);border-color:var(--gold);color:var(--ink);padding:12px 22px;font-size:.95rem}
-.btn.solid:hover{background:#c08e14;color:var(--ink)}
 
 /* winners */
 .cats{display:grid;gap:26px}
 .cat{background:var(--card);border-radius:var(--r);border:1px solid var(--line);padding:26px}
-.cat > h3{font-size:1.5rem;margin-bottom:16px;display:flex;align-items:center;gap:12px}
-.cat > h3 .ic{font-size:1.6rem}
-.winners{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
-.win{border-radius:12px;padding:16px;border:1px solid var(--line);background:#fcfbf8;position:relative}
+.cat > h3{font-size:1.45rem;margin-bottom:16px;display:flex;align-items:center;gap:12px}
+.winners{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.win{border-radius:12px;padding:16px;border:1px solid var(--line);background:#fcfbf8}
 .win.gold{border:2px solid var(--gold);background:var(--gold-soft)}
 .win .rank{font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
 .win.gold .rank{color:#8a6410}
-.win h4{margin:4px 0 6px;font-family:Fraunces,serif;font-size:1.2rem}
+.win h4{margin:4px 0 6px;font-size:1.2rem}
 .win p{margin:0;font-size:.88rem;color:#33405a}
 .win .watch{margin-top:8px;font-size:.82rem;color:var(--red)}
-
+.cat .compare-these{margin-top:14px}
 .avoid{margin-top:22px;background:var(--red-soft);border-left:6px solid var(--red);border-radius:12px;padding:18px 22px}
 .avoid h4{margin:0 0 4px;color:var(--red);font-size:1.05rem}
 .avoid p{margin:0;font-size:.92rem}
@@ -125,12 +165,12 @@ td b{font-variant-numeric:tabular-nums}
 
 /* verdict */
 .verdict{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.v{background:var(--ink);color:#fff;border-radius:var(--r);padding:24px;position:relative}
+.v{background:var(--ink);color:#fff;border-radius:var(--r);padding:24px}
 .v .n{font-family:Fraunces,serif;font-size:3rem;color:var(--gold);line-height:1}
 .v h3{font-size:1.15rem;margin:10px 0 8px}
 .v p{color:#c3cede;font-size:.92rem;margin:0}
-.combo{margin-top:22px;text-align:center;background:var(--gold-soft);border-radius:var(--r);padding:20px;font-size:1.05rem}
-.combo b{font-family:Fraunces,serif}
+.v b{color:#fff}
+.combo{margin-top:22px;text-align:center;background:var(--gold-soft);border-radius:var(--r);padding:20px;font-size:1.02rem}
 
 /* checks */
 .checks{display:grid;gap:12px}
@@ -139,16 +179,16 @@ td b{font-variant-numeric:tabular-nums}
 
 /* sources */
 .sources{columns:2;column-gap:32px;font-size:.88rem;padding-left:20px}
-.sources li{break-inside:avoid;margin-bottom:10px}
+.sources li{break-inside:avoid;margin-bottom:10px;overflow-wrap:anywhere}
 .sources small{color:var(--muted)}
 
-/* correction form */
+/* corrections */
 .correct{background:var(--ink);color:#fff;border-radius:var(--r);padding:32px;display:grid;grid-template-columns:1fr 1.3fr;gap:32px}
 .correct h2{color:#fff}
 .correct p{color:#c3cede}
 form .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 form label{display:block;font-size:.8rem;font-weight:600;margin:10px 0 4px;color:#dfe6f0}
-form input,form select,form textarea{width:100%;padding:10px 12px;border-radius:10px;border:1px solid #3a4c69;background:#16253c;color:#fff;font:400 .92rem Inter,sans-serif}
+form input,form select,form textarea{width:100%;padding:11px 12px;border-radius:10px;border:1px solid #3a4c69;background:#16253c;color:#fff;font:400 16px Inter,sans-serif}
 form textarea{min-height:90px;resize:vertical}
 form input:focus,form select:focus,form textarea:focus{outline:2px solid var(--gold);border-color:transparent}
 .form-actions{margin-top:16px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
@@ -156,47 +196,98 @@ form input:focus,form select:focus,form textarea:focus{outline:2px solid var(--g
 
 footer{padding:36px 0 60px;font-size:.82rem;color:var(--muted)}
 
+/* ===== RESPONSIVE ===== */
 @media (max-width:900px){
-  .stats,.notice,.verdict{grid-template-columns:1fr 1fr}
+  .stats,.notice{grid-template-columns:1fr 1fr}
+  .verdict{grid-template-columns:1fr}
   .charts,.correct{grid-template-columns:1fr}
   .sources{columns:1}
 }
-@media (max-width:560px){
-  .stats,.notice,.verdict{grid-template-columns:1fr}
-  .bar{grid-template-columns:80px 1fr 78px;font-size:.84rem}
+@media (max-width:760px){
+  body{font-size:15px}
+  .wrap{padding:0 16px}
+  section{padding:40px 0}
+  header.hero{padding:44px 0 56px}
+  .stat{padding:14px}
+  .stat b{font-size:1.5rem}
+  .notice{grid-template-columns:1fr;margin-top:-28px}
+  .chart,.cat{padding:18px}
+  .correct{padding:22px}
+
+  /* collapsible filter bar */
+  .fb-toggle{display:flex;width:100%;align-items:center;justify-content:space-between;gap:10px;padding:10px 0;background:none;border:none;font:700 .9rem Inter,sans-serif;color:var(--ink);cursor:pointer;min-height:48px}
+  .fb-toggle .sum{font-weight:500;color:var(--muted);font-size:.82rem;flex:1;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .fb-toggle .chev{transition:.2s}
+  .filterbar[data-open="false"] .fb-inner{display:none}
+  .filterbar[data-open="true"] .chev{transform:rotate(180deg)}
+  .filterbar[data-open="true"] .fb-inner{max-height:calc(100vh - 140px);overflow-y:auto;padding-top:4px}
+  .fb-row.banks-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .fb-row.banks-row .fb-label{grid-column:1/-1}
+  .fb-row.banks-row .chip{justify-content:flex-start}
+  .fb-label{min-width:0;width:100%}
+  .fb-row.uses{flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}
+  .fb-row.uses .fb-label{display:none}
+  .fb-row.uses .chip{flex:none}
+  .fb-controls{gap:10px}
+  .fb-status{margin-left:0;width:100%}
+  .fb-done{display:block!important;width:100%}
+
+  /* table → stacked cards */
+  .table-wrap{background:none;border:none;overflow:visible}
+  table,thead,tbody,tr,td{display:block;width:100%}
+  thead{position:absolute;left:-9999px}
+  tbody tr{background:var(--card)!important;border:1px solid var(--line);border-radius:14px;margin-bottom:12px;padding:6px 0;overflow:hidden}
+  td{border:none;padding:8px 16px;display:grid;grid-template-columns:42% 1fr;gap:10px}
+  td:before{content:attr(data-label);font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;font-weight:700;color:var(--muted);padding-top:2px}
+  td:first-child{display:block;background:var(--ink);color:#fff;padding:12px 16px;margin:-6px 0 6px}
+  td:first-child:before{display:none}
+  td:first-child small{color:#c3cede}
+  .mobile-sort{display:flex!important}
+
+  .bar{grid-template-columns:78px 1fr 70px;gap:8px;font-size:.84rem}
+  .banks{grid-template-columns:1fr}
   form .row{grid-template-columns:1fr}
-  .check{grid-template-columns:1fr}
+  .check{grid-template-columns:1fr;gap:4px}
+  .win{padding:14px}
 }
-@media print{
-  nav.top,.correct,.btn{display:none!important}
-  section{break-inside:avoid-page}
+@media (max-width:380px){
+  .stats{grid-template-columns:1fr}
+  .kv{grid-template-columns:1fr 1fr;gap:8px}
+  td{grid-template-columns:1fr;gap:2px}
 }
+.fb-done,.mobile-sort{display:none}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+@media print{nav.top,.filterbar,.correct,.btn{display:none!important}section{break-inside:avoid-page}}
 </style>
 </head>
 <body>
 
-<nav class="top"><div class="wrap">
+<nav class="top" aria-label="Sections"><div class="wrap">
   <a class="brand" href="#top">UG Bank Fees</a>
   <a href="#charts">Charts</a>
-  <a href="#table">Comparison</a>
-  <a href="#banks">Bank profiles</a>
+  <a href="#table">Table</a>
+  <a href="#banks">Profiles</a>
   <a href="#winners">Winners</a>
   <a href="#verdict">Verdict</a>
   <a href="#checks">Fact-check</a>
   <a href="#sources">Sources</a>
-  <a href="#correct">Suggest a correction</a>
+  <a href="#correct">Corrections</a>
 </div></nav>
 
 <header class="hero" id="top">
   <div class="wrap">
     <div class="kicker">Uganda · 2025–2026 tariff guides</div>
     <h1>Which Ugandan bank <em>actually</em> costs you less?</h1>
-    <p class="sub">Eight banks compared on monthly fees, ATM withdrawals, online transfers and card costs, with the best picks for personal, business and online banking.</p>
+    <p class="sub">Eight banks compared on monthly fees, ATM withdrawals, online transfers and card costs. Filter by the banks you're considering or by how you bank.</p>
     <div class="stats">
-      <div class="stat"><b class="num">8</b><span>banks compared: Stanbic, Equity, Absa, Centenary, KCB, I&amp;M, NCBA, Exim</span></div>
-      <div class="stat"><b class="num">UGX 0</b><span>lowest entry monthly fee (Stanbic, Equity, Absa, KCB, Exim)</span></div>
-      <div class="stat"><b class="num">+15%</b><span>URA excise duty added on top of most listed fees</span></div>
-      <div class="stat"><b class="num">UGX 10M</b><span>deposit insurance per depositor (Deposit Protection Fund)</span></div>
+      <div class="stat"><b>8</b><span>banks: Stanbic, Equity, Absa, Centenary, KCB, I&amp;M, NCBA, Exim</span></div>
+      <div class="stat"><b>UGX 0</b><span>lowest entry monthly fee (5 banks)</span></div>
+      <div class="stat"><b>+15%</b><span>URA excise duty added on top of most listed fees</span></div>
+      <div class="stat"><b>UGX 10M</b><span>deposit insurance per depositor (DPF)</span></div>
+    </div>
+    <div class="hero-cta">
+      <a class="btn solid" href="#compare-zone">Start comparing</a>
+      <a class="btn ghost-light" href="#winners">Jump to winners</a>
     </div>
     <div class="meta">Compiled November 2026 from each bank's published tariff guide. Fees change often, so check the linked source before you decide.</div>
   </div>
@@ -204,224 +295,126 @@ footer{padding:36px 0 60px;font-size:.82rem;color:var(--muted)}
 
 <div class="wrap">
   <div class="notice">
-    <div class="note"><h3>Excise duty not included</h3><p>Almost every figure in Ugandan tariff guides is <b>exclusive of the 15% URA excise duty</b>. Loan charges are generally exempt. A UGX 2,000 EFT really costs about UGX 2,300.</p></div>
+    <div class="note"><h3>Excise duty not included</h3><p>Almost every figure is <b>exclusive of the 15% URA excise duty</b>; loan charges are generally exempt. A UGX 2,000 EFT really costs about UGX 2,300.</p></div>
     <div class="note"><h3>All 8 are regulated</h3><p>All are supervised by the <b>Bank of Uganda</b>. Deposits are insured up to <b>UGX 10 million</b> per depositor by the Deposit Protection Fund.</p></div>
-    <div class="note"><h3>Entry account ≠ your account</h3><p>Figures are for the cheapest entry or pay-as-you-transact account unless stated. Bundled accounts swap per-transaction fees for one flat monthly fee.</p></div>
+    <div class="note"><h3>Entry account ≠ your account</h3><p>Figures are for the cheapest entry or pay-as-you-transact account unless stated. Bundled accounts swap per-transaction fees for one flat fee.</p></div>
   </div>
 </div>
 
-<!-- CHARTS -->
-<section id="charts">
-  <div class="wrap">
-    <div class="kicker">At a glance</div>
-    <h2>The four fees that matter most</h2>
-    <p class="lead">Shorter bars are cheaper. Figures are in UGX before excise duty, from each bank's latest tariff guide.</p>
-
-    <div class="charts">
-      <div class="chart">
-        <h3>Entry personal monthly fee</h3>
-        <p class="cap">Cheapest everyday personal account each bank offers</p>
-        <div class="bar zero"><span class="lbl">Stanbic</span><div class="track"><div class="fill" style="width:0;--c:var(--stanbic)"></div></div><span class="val">Free</span></div>
-        <div class="bar zero"><span class="lbl">Equity</span><div class="track"><div class="fill" style="width:0;--c:var(--equity)"></div></div><span class="val">Free</span></div>
-        <div class="bar zero"><span class="lbl">Absa</span><div class="track"><div class="fill" style="width:0;--c:var(--absa)"></div></div><span class="val">Free</span></div>
-        <div class="bar zero"><span class="lbl">KCB</span><div class="track"><div class="fill" style="width:0;--c:var(--kcb)"></div></div><span class="val">Free</span></div>
-        <div class="bar zero"><span class="lbl">Exim</span><div class="track"><div class="fill" style="width:0;--c:var(--exim)"></div></div><span class="val">Free</span></div>
-        <div class="bar"><span class="lbl">Centenary</span><div class="track"><div class="fill" style="width:20%;--c:var(--cente)"></div></div><span class="val">3,000</span></div>
-        <div class="bar"><span class="lbl">I&amp;M</span><div class="track"><div class="fill" style="width:20%;--c:var(--im)"></div></div><span class="val">3,000</span></div>
-        <div class="bar"><span class="lbl">NCBA</span><div class="track"><div class="fill" style="width:100%;--c:var(--ncba)"></div></div><span class="val">15,000</span></div>
-        <p class="legend-note">Centenary's CentePlus and Diaspora accounts are also UGX 0. I&amp;M's UGX 3,000 Paygo includes free insurance. NCBA's figure is its Gold PAYT account.</p>
-      </div>
-
-      <div class="chart">
-        <h3>On-us ATM withdrawal</h3>
-        <p class="cap">Own card at the bank's own ATM, smallest withdrawal band</p>
-        <div class="bar"><span class="lbl">I&amp;M</span><div class="track"><div class="fill" style="width:66.7%;--c:var(--im)"></div></div><span class="val">1,000</span></div>
-        <div class="bar"><span class="lbl">Exim</span><div class="track"><div class="fill" style="width:66.7%;--c:var(--exim)"></div></div><span class="val">1,000*</span></div>
-        <div class="bar"><span class="lbl">Equity</span><div class="track"><div class="fill" style="width:80%;--c:var(--equity)"></div></div><span class="val">1,200</span></div>
-        <div class="bar"><span class="lbl">Absa</span><div class="track"><div class="fill" style="width:80%;--c:var(--absa)"></div></div><span class="val">1,200</span></div>
-        <div class="bar"><span class="lbl">Centenary</span><div class="track"><div class="fill" style="width:80%;--c:var(--cente)"></div></div><span class="val">1,200</span></div>
-        <div class="bar"><span class="lbl">Stanbic</span><div class="track"><div class="fill" style="width:93.3%;--c:var(--stanbic)"></div></div><span class="val">1,400</span></div>
-        <div class="bar"><span class="lbl">KCB</span><div class="track"><div class="fill" style="width:100%;--c:var(--kcb)"></div></div><span class="val">1,500</span></div>
-        <p class="legend-note">*Exim's tariff sheet lists a UGX 1,000 ATM access fee for Exim cards. The original summary said UGX 700 (see <a href="#checks">fact-check</a>). KCB cardless withdrawal costs UGX 1,000. NCBA bundles ATM use into its account tiers, so it isn't charted.</p>
-      </div>
-
-      <div class="chart">
-        <h3>Outward online EFT</h3>
-        <p class="cap">Sending to another Ugandan bank via internet or mobile banking</p>
-        <div class="bar"><span class="lbl">Stanbic</span><div class="track"><div class="fill" style="width:38.5%;--c:var(--stanbic)"></div></div><span class="val">2,000</span></div>
-        <div class="bar"><span class="lbl">KCB</span><div class="track"><div class="fill" style="width:57.7%;--c:var(--kcb)"></div></div><span class="val">3,000</span></div>
-        <div class="bar"><span class="lbl">Centenary</span><div class="track"><div class="fill" style="width:57.7%;--c:var(--cente)"></div></div><span class="val">3,000+</span></div>
-        <div class="bar"><span class="lbl">Absa</span><div class="track"><div class="fill" style="width:76.9%;--c:var(--absa)"></div></div><span class="val">4,000</span></div>
-        <div class="bar"><span class="lbl">Equity</span><div class="track"><div class="fill" style="width:100%;--c:var(--equity)"></div></div><span class="val">5,200</span></div>
-        <p class="legend-note">Centenary ranges UGX 3,000–7,000 by amount. Equity Corporate Internet Banking EFTs are UGX 3,000. Online RTGS is UGX 10,000 at most banks and UGX 15,000 at KCB. I&amp;M, NCBA and Exim EFT figures weren't stated in the summary.</p>
-      </div>
-
-      <div class="chart">
-        <h3>Cost of an international online card payment</h3>
-        <p class="cap">FX or cross-border fee when a UGX card pays a foreign website</p>
-        <div class="bar zero"><span class="lbl">Equity USD</span><div class="track"><div class="fill" style="width:0;--c:var(--equity)"></div></div><span class="val">Free*</span></div>
-        <div class="bar"><span class="lbl">Absa UGX</span><div class="track"><div class="fill" style="width:80%;--c:var(--absa)"></div></div><span class="val">6%</span></div>
-        <div class="bar"><span class="lbl">I&amp;M UGX</span><div class="track"><div class="fill" style="width:80%;--c:var(--im)"></div></div><span class="val">6%</span></div>
-        <div class="bar"><span class="lbl">Stanbic</span><div class="track"><div class="fill" style="width:93.3%;--c:var(--stanbic)"></div></div><span class="val">7%</span></div>
-        <div class="bar"><span class="lbl">Centenary</span><div class="track"><div class="fill" style="width:100%;--c:var(--cente)"></div></div><span class="val">7.5%</span></div>
-        <p class="legend-note">*Equity's Visa USD Gold debit card (USD 10 issuance) charges nothing for online or POS purchases, but you load it in USD. Absa's Multi-Currency Virtual Card and I&amp;M's Multi-Currency Prepaid Card avoid the 6% if you pre-load the right currency. Stanbic's 7% is the currency-conversion fee in its March 2026 personal guide. Centenary is 2.5% plus a 5% FX mark-up.</p>
+<!-- ===== COMPARE ZONE (filters drive everything inside) ===== -->
+<div id="compare-zone">
+  <div class="filterbar" id="filterbar" data-open="false">
+    <div class="wrap">
+      <button class="fb-toggle" id="fb-toggle" aria-expanded="false" aria-controls="fb-inner">
+        <span>⚙︎ Filters</span><span class="sum" id="fb-sum">All 8 banks</span><span class="chev">▾</span>
+      </button>
+      <div class="fb-inner" id="fb-inner">
+        <div class="fb-row uses" role="group" aria-label="Use case">
+          <span class="fb-label">I need</span>
+          <!-- use-case chips injected -->
+        </div>
+        <div class="fb-row banks-row" role="group" aria-label="Banks">
+          <span class="fb-label">Banks</span>
+          <!-- bank chips injected -->
+        </div>
+        <div class="fb-controls">
+          <label class="switch"><input type="checkbox" id="f-zero"> UGX 0 monthly fee only</label>
+          <label class="select">Sort by
+            <select id="f-sort">
+              <option value="name">Bank name (A–Z)</option>
+              <option value="monthly">Monthly fee</option>
+              <option value="atm">ATM withdrawal fee</option>
+              <option value="eft">Online EFT fee</option>
+              <option value="fx">International card cost</option>
+            </select>
+          </label>
+          <button class="chip link" id="f-all" type="button">Select all</button>
+          <button class="chip link" id="f-share" type="button">Copy link to this comparison</button>
+          <span class="fb-status" id="fb-status" aria-live="polite"></span>
+        </div>
+        <button class="btn fb-done" id="fb-done" type="button">Show results</button>
       </div>
     </div>
   </div>
-</section>
 
-<!-- TABLE -->
-<section id="table">
-  <div class="wrap">
-    <div class="kicker">Side by side</div>
-    <h2>Tariff comparison table</h2>
-    <p class="lead">All figures in UGX unless stated, before 15% excise duty. Scroll sideways on mobile.</p>
-    <div class="table-wrap">
-      <table>
-        <thead><tr>
-          <th>Bank (guide date)</th><th>Entry personal monthly fee</th><th>On-us ATM withdrawal</th><th>Online EFT / RTGS (outward)</th><th>Card &amp; online payment notes</th><th>Standout strength</th>
-        </tr></thead>
-        <tbody>
-          <tr><td><span class="bank-dot" style="background:var(--stanbic)"></span><b>Stanbic</b><br><small>Mar 2026</small></td><td><b>0</b> Everyday Banking<br>6,500 Karibu Salary<br>8,500 SMART</td><td><b>1,400</b> (≤500k)<br>2,000 (&gt;500k)</td><td><b>2,000</b> EFT<br><b>10,000</b> RTGS</td><td>Bi-annual Visa fee 17,500 (Classic); 5,000 on Everyday Banking. FlexiPay wallet.</td><td>Cheapest online EFTs, largest asset base, nationwide ATM and branch network</td></tr>
-          <tr><td><span class="bank-dot" style="background:var(--equity)"></span><b>Equity</b><br><small>May 2026</small></td><td><b>0</b> Standard Savings/Current &amp; FCY</td><td><b>1,200</b> (up to 2M)<br>USD 0.30 on USD Gold</td><td>5,200 EFT (3,000 Corp IB)<br><b>10,000</b> online RTGS</td><td>Visa Debit online/POS <b>free</b>; USD Gold card (USD 10) good for online</td><td>Zero monthly fees on UGX and USD accounts; Equity Duuka agents (free deposits)</td></tr>
-          <tr><td><span class="bank-dot" style="background:var(--absa)"></span><b>Absa</b><br><small>Jan 2025 + Dec 2025 digital</small></td><td><b>0</b> Flexi PAYT<br>4,000 Access Plus<br>8,500 Salary</td><td><b>1,200</b><br>free on Salary/bundles</td><td><b>4,000</b> EFT<br><b>10,000</b> RTGS</td><td>6% FX fee on UGX debit card, but Multi-Currency Virtual Card (USD/EUR/GBP/ZAR)</td><td>Best digital app, virtual multi-currency cards, Absa Pay by Link for SMEs</td></tr>
-          <tr><td><span class="bank-dot" style="background:var(--cente)"></span><b>Centenary</b><br><small>Feb 2026</small></td><td><b>3,000</b> Ordinary Savings<br>0 CentePlus / Diaspora</td><td><b>1,200</b> (≤1M)<br>2,000 (1M–2M)</td><td>3,000–7,000 EFT<br><b>10,000</b> online RTGS</td><td>Costly online: 2,000 domestic online fee; 2.5% + 5% FX mark-up internationally</td><td>Best upcountry reach (80+ branches plus agents); microfinance and agri loans</td></tr>
-          <tr><td><span class="bank-dot" style="background:var(--kcb)"></span><b>KCB</b><br><small>Jun 2026</small></td><td><b>0</b> Smart UGX &amp; PAYT Current<br>15,000 Bundled</td><td><b>1,500</b><br>1,000 cardless</td><td><b>3,000</b> EFT<br>15,000 RTGS</td><td>2,000/month Visa debit fee; cheap domestic off-us Visa ATM (5,000)</td><td>UGX 0 monthly fee even on Corporate PAYT; strong East Africa network</td></tr>
-          <tr><td><span class="bank-dot" style="background:var(--im)"></span><b>I&amp;M</b><br><small>Jan/Oct 2026</small></td><td><b>3,000</b> Paygo (free insurance)<br>10,500 Bundled</td><td><b>1,000</b><br>non-I&amp;M local ATM only 2,500</td><td><b>10,000</b> online RTGS</td><td>6% issuer FX fee on UGX cards, but Multi-Currency Mastercard Prepaid (9 currencies)</td><td>Lowest local ATM fees (on-us and off-us), shorter queues, good prepaid FX card</td></tr>
-          <tr><td><span class="bank-dot" style="background:var(--ncba)"></span><b>NCBA</b><br><small>2026</small></td><td><b>15,000</b> Gold PAYT<br>25,000 Gold Bundled</td><td>Free or per tier on bundles (5M daily ATM limit)</td><td><b>10,000</b> mobile RTGS</td><td>High-limit Visa Platinum/Classic credit and debit cards; NCBA NOW app</td><td>Best for asset finance (vehicles, machinery), high limits, premier and corporate clients</td></tr>
-          <tr><td><span class="bank-dot" style="background:var(--exim)"></span><b>Exim</b><br><small>2025/2026</small></td><td><b>0</b> Basic Savings / Student<br>25,000 Single Fee</td><td><b>1,000</b> per tariff sheet*<br>2,000 Interswitch</td><td>Standard EFT/RTGS + Exim Global Pay</td><td>Visa/Mastercard; updated Exim Mobile app (MTN/Airtel push and pull)</td><td>Cheap ATM fee, strong FX/treasury desk, good for Uganda–Tanzania trade</td></tr>
-        </tbody>
-      </table>
+  <section id="charts">
+    <div class="wrap">
+      <div class="kicker">At a glance</div>
+      <h2>The four fees that matter most</h2>
+      <p class="lead">Shorter bars are cheaper; ★ marks the cheapest bank you've selected. Figures are UGX before excise duty, and bar lengths use the same scale whatever you filter.</p>
+      <div class="charts" id="charts-grid"></div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- BANK CARDS -->
-<section id="banks">
-  <div class="wrap">
-    <div class="kicker">Bank by bank</div>
-    <h2>Profiles: strengths and watch-outs</h2>
-    <p class="lead">Each card links to the bank's official tariff guide. Spot something wrong? Use <b>Report an error</b> on any card.</p>
-
-    <div class="banks">
-      <article class="bank" style="--c:var(--stanbic)">
-        <div class="head"><h3>Stanbic Bank Uganda</h3><small>Tariff guide effective 27 March 2026</small></div>
-        <div class="body">
-          <div class="kv"><div><span>Monthly fee</span><b>UGX 0</b></div><div><span>ATM on-us</span><b>1,400</b></div><div><span>Online EFT</span><b>2,000</b></div><div><span>RTGS</span><b>10,000</b></div></div>
-          <ul class="pros"><li>Uganda's largest bank by assets, with the widest ATM network</li><li>Cheapest online EFTs (UGX 2,000)</li><li>Karibu Salary (6,500) and SMART (8,500) bundle free ATM use and SMS alerts</li><li>Business Online, cash-in-transit, POS and trade finance are industry standard</li></ul>
-          <ul class="cons"><li>7% currency-conversion fee on card spend abroad</li><li>Corporate current accounts cost UGX 35,000/month</li></ul>
-        </div>
-        <div class="foot"><span class="badge ok">Source checked</span><button class="btn" data-bank="Stanbic">Report an error</button></div>
-      </article>
-
-      <article class="bank" style="--c:var(--equity)">
-        <div class="head"><h3>Equity Bank Uganda</h3><small>Tariff guide May 2026</small></div>
-        <div class="body">
-          <div class="kv"><div><span>Monthly fee</span><b>UGX 0</b></div><div><span>ATM on-us</span><b>1,200</b></div><div><span>Online EFT</span><b>5,200</b></div><div><span>RTGS</span><b>10,000</b></div></div>
-          <ul class="pros"><li>Zero monthly fee and zero minimum balance on UGX and USD accounts</li><li>Free cash deposits at thousands of Equity Duuka agents</li><li>Visa USD Gold debit (USD 10) with free online/POS spend, good for freelancers</li><li>Cross-border transfers (KE, TZ, RW, DRC, SS) of USD 3–6 on Corporate IB</li></ul>
-          <ul class="cons"><li>Over-the-counter branch withdrawals cost UGX 10,000–30,000</li><li>Branches can be crowded</li><li>Highest retail online EFT of the group (5,200)</li></ul>
-        </div>
-        <div class="foot"><span class="badge ok">Source checked</span><button class="btn" data-bank="Equity">Report an error</button></div>
-      </article>
-
-      <article class="bank" style="--c:var(--absa)">
-        <div class="head"><h3>Absa Bank Uganda</h3><small>Tariff guide Jan 2025 + Dec 2025 digital update</small></div>
-        <div class="body">
-          <div class="kv"><div><span>Monthly fee</span><b>UGX 0</b></div><div><span>ATM on-us</span><b>1,200</b></div><div><span>Online EFT</span><b>4,000</b></div><div><span>RTGS</span><b>10,000</b></div></div>
-          <ul class="pros"><li>Widely rated as the smoothest mobile and internet banking</li><li>Multi-Currency Virtual Card (UGX, USD, EUR, GBP, ZAR)</li><li>Absa Pay by Link: get paid by any Visa card with no website or POS</li><li>Business Access Account from UGX 10,000/month</li></ul>
-          <ul class="cons"><li>6% international fee on the standard UGX debit card</li></ul>
-        </div>
-        <div class="foot"><span class="badge warn">Guide not reviewed</span><button class="btn" data-bank="Absa">Report an error</button></div>
-      </article>
-
-      <article class="bank" style="--c:var(--cente)">
-        <div class="head"><h3>Centenary Bank</h3><small>Tariff guide 2026 (Feb)</small></div>
-        <div class="body">
-          <div class="kv"><div><span>Monthly fee</span><b>3,000</b></div><div><span>ATM on-us</span><b>1,200</b></div><div><span>Online EFT</span><b>3,000–7,000</b></div><div><span>RTGS</span><b>10,000</b></div></div>
-          <ul class="pros"><li>Best upcountry reach: 80+ branches plus agents</li><li>Strong in microfinance and agricultural loans</li><li>CentePlus and Diaspora accounts have no monthly fee</li></ul>
-          <ul class="cons"><li>UGX 2,000 fee on domestic online card payments</li><li>2.5% + 5% FX mark-up (7.5%) on international e-commerce</li><li>Regular transactions can trigger per-entry charges</li></ul>
-        </div>
-        <div class="foot"><span class="badge ok">Source checked</span><button class="btn" data-bank="Centenary">Report an error</button></div>
-      </article>
-
-      <article class="bank" style="--c:var(--kcb)">
-        <div class="head"><h3>KCB Bank Uganda</h3><small>Tariff guide Jun 2026</small></div>
-        <div class="body">
-          <div class="kv"><div><span>Monthly fee</span><b>UGX 0</b></div><div><span>ATM on-us</span><b>1,500</b></div><div><span>Online EFT</span><b>3,000</b></div><div><span>RTGS</span><b>15,000</b></div></div>
-          <ul class="pros"><li>Corporate Pay-As-You-Go current account with UGX 0 monthly fee and no minimum balance</li><li>Bulk mobile-money payouts at UGX 2,000 per entry</li><li>Cardless withdrawal UGX 1,000; off-us Visa ATM UGX 5,000</li><li>Strong East Africa trade network</li></ul>
-          <ul class="cons"><li>UGX 2,000/month Visa debit card fee</li><li>Highest RTGS of the group (15,000)</li></ul>
-        </div>
-        <div class="foot"><span class="badge warn">See fact-check</span><button class="btn" data-bank="KCB">Report an error</button></div>
-      </article>
-
-      <article class="bank" style="--c:var(--im)">
-        <div class="head"><h3>I&amp;M Bank Uganda</h3><small>Tariff guide 2026 (Jan, revised Oct)</small></div>
-        <div class="body">
-          <div class="kv"><div><span>Monthly fee</span><b>3,000</b></div><div><span>ATM on-us</span><b>1,000</b></div><div><span>Off-us local ATM</span><b>2,500</b></div><div><span>RTGS</span><b>10,000</b></div></div>
-          <ul class="pros"><li>Lowest local ATM fees, both own and other banks' ATMs</li><li>Paygo account: no minimum balance, includes free insurance</li><li>Multi-Currency Mastercard Prepaid: 9 currencies, open to non-customers</li><li>Default online limit UGX 7M, expandable to 30M; shorter queues</li></ul>
-          <ul class="cons"><li>6% issuer FX fee on UGX cards used abroad</li></ul>
-        </div>
-        <div class="foot"><span class="badge ok">Source checked</span><button class="btn" data-bank="I&M">Report an error</button></div>
-      </article>
-
-      <article class="bank" style="--c:var(--ncba)">
-        <div class="head"><h3>NCBA Bank Uganda</h3><small>Tariff guide 2026</small></div>
-        <div class="body">
-          <div class="kv"><div><span>Monthly fee</span><b>15,000</b></div><div><span>ATM</span><b>Per tier</b></div><div><span>Daily ATM limit</span><b>5M</b></div><div><span>Mobile RTGS</span><b>10,000</b></div></div>
-          <ul class="pros"><li>Best for asset finance: trucks, cars, machinery, leasing</li><li>High-limit Visa Platinum and Classic credit and debit cards</li><li>Strong with premier and corporate clients; NCBA NOW app</li></ul>
-          <ul class="cons"><li>Most expensive entry account (Gold PAYT UGX 15,000/month)</li><li>Latest Uganda tariff guide online is the 2024 edition</li></ul>
-        </div>
-        <div class="foot"><span class="badge warn">See fact-check</span><button class="btn" data-bank="NCBA">Report an error</button></div>
-      </article>
-
-      <article class="bank" style="--c:var(--exim)">
-        <div class="head"><h3>Exim Bank Uganda</h3><small>Tariff guide 2025/2026</small></div>
-        <div class="body">
-          <div class="kv"><div><span>Monthly fee</span><b>UGX 0</b></div><div><span>ATM on-us</span><b>1,000*</b></div><div><span>Interswitch ATM</span><b>2,000</b></div><div><span>Cross-border</span><b>Global Pay</b></div></div>
-          <ul class="pros"><li>Basic Savings and Student accounts are free</li><li>Responsive FX and treasury desk</li><li>Good for Uganda–Tanzania import and export</li><li>Exim Global Pay (with TerraPay) for cheaper cross-border remittances</li></ul>
-          <ul class="cons"><li>Single Fee account costs UGX 25,000/month</li><li>Visa domestic ATM (other banks) UGX 7,000</li></ul>
-        </div>
-        <div class="foot"><span class="badge warn">See fact-check</span><button class="btn" data-bank="Exim">Report an error</button></div>
-      </article>
+  <section id="table">
+    <div class="wrap">
+      <div class="kicker">Side by side</div>
+      <h2>Tariff comparison table</h2>
+      <p class="lead">All figures in UGX unless stated, before 15% excise duty. Sort with the filter bar, or click a column heading on desktop.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr>
+            <th><button data-sort="name">Bank (guide date)</button></th>
+            <th><button data-sort="monthly">Entry monthly fee</button></th>
+            <th><button data-sort="atm">On-us ATM withdrawal</button></th>
+            <th><button data-sort="eft">Online EFT / RTGS</button></th>
+            <th><button data-sort="fx">Card &amp; online payments</button></th>
+            <th>Standout strength</th>
+          </tr></thead>
+          <tbody id="table-body"></tbody>
+        </table>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <section id="banks">
+    <div class="wrap">
+      <div class="kicker">Bank by bank</div>
+      <h2>Profiles: strengths and watch-outs</h2>
+      <p class="lead">Each card links to the bank's official tariff guide. Spot something wrong? Use <b>Report an error</b>.</p>
+      <div class="banks" id="bank-cards"></div>
+    </div>
+  </section>
+</div>
 
 <!-- WINNERS -->
 <section id="winners">
   <div class="wrap">
     <div class="kicker">Category winners</div>
     <h2>Which bank should you choose?</h2>
-    <p class="lead">Picks depend on how you bank. Here are the best fits by use case.</p>
+    <p class="lead">Picks depend on how you bank. Tap <b>Compare these</b> to filter the charts to a category's picks.</p>
 
     <div class="cats">
       <div class="cat">
-        <h3><span class="ic">👤</span> Personal banking</h3>
+        <h3><span>👤</span> Personal banking</h3>
         <div class="winners">
           <div class="win gold"><div class="rank">Winner · zero-fee everyday</div><h4>Equity Bank</h4><p>No monthly fee and no minimum balance on UGX and USD accounts. Free deposits at Equity Duuka agents; ATM withdrawals UGX 1,200.</p><p class="watch">Avoid branch counter withdrawals (UGX 10,000–30,000).</p></div>
           <div class="win gold"><div class="rank">Winner · salary &amp; convenience</div><h4>Stanbic Bank</h4><p>Everyday Banking at UGX 0, or Karibu Salary (6,500) and SMART (8,500) with free ATM use and SMS alerts. Widest ATM network and cheapest EFTs.</p></div>
           <div class="win"><div class="rank">Sleeper pick · low hassle</div><h4>I&amp;M Bank</h4><p>Paygo (UGX 3,000) with no minimum balance and free insurance. ATM UGX 1,000 own, UGX 2,500 at other local ATMs, against 8,000–14,600 elsewhere.</p></div>
           <div class="win"><div class="rank">Only if you're upcountry</div><h4>Centenary Bank</h4><p>Best rural branch and agent coverage. Watch per-entry charges and steep online card fees.</p></div>
         </div>
+        <button class="btn compare-these" data-use="personal">Compare these →</button>
       </div>
 
       <div class="cat">
-        <h3><span class="ic">💼</span> Business banking</h3>
+        <h3><span>💼</span> Business banking</h3>
         <div class="winners">
           <div class="win gold"><div class="rank">Winner · established businesses</div><h4>Stanbic Bank</h4><p>Business Online, cash-in-transit, POS and trade finance. Corporate current UGX 35,000/month; EFT 2,000, RTGS 10,000.</p></div>
           <div class="win gold"><div class="rank">Winner · SMEs &amp; EA trade</div><h4>Equity or KCB</h4><p><b>Equity:</b> free cash deposits at agents, USD 3–6 cross-border transfers, Corporate IB UGX 150,000/yr with 3,000 EFTs. <b>KCB:</b> Corporate PAYT at UGX 0/month, 3,000 EFTs, 2,000 bulk mobile-money payouts.</p></div>
           <div class="win gold"><div class="rank">Winner · digital &amp; online merchants</div><h4>Absa Bank</h4><p>Business Access from UGX 10,000/month. Pay by Link lets clients pay with any Visa card, settled instantly, with no website or POS needed.</p></div>
           <div class="win"><div class="rank">Niche picks</div><h4>NCBA · Exim</h4><p><b>NCBA</b> for asset finance and leasing. <b>Exim</b> for heavy Tanzania trade and a responsive FX desk.</p></div>
         </div>
+        <button class="btn compare-these" data-use="business">Compare these →</button>
       </div>
 
       <div class="cat">
-        <h3><span class="ic">🌐</span> Online banking &amp; international payments</h3>
+        <h3><span>🌐</span> Online banking &amp; international payments</h3>
         <div class="winners">
           <div class="win gold"><div class="rank">#1 · digital experience</div><h4>Absa Bank</h4><p>Smoothest app; open USD, GBP and EUR accounts without a branch visit. Use the Multi-Currency Virtual Card, not the UGX debit card (6% fee).</p></div>
           <div class="win gold"><div class="rank">#2 · USD freelancers</div><h4>Equity Bank</h4><p>USD account with no fees and no minimum, free USD cash deposits up to USD 5,000/day, Visa USD Gold with free online spend. SWIFT <code>EQBLUGKAXXX</code> for Wise and Payoneer.</p></div>
           <div class="win gold"><div class="rank">#3 · prepaid for shopping</div><h4>I&amp;M Bank</h4><p>Multi-Currency Mastercard Prepaid with 9 currencies (UGX, USD, GBP, EUR, KES, TZS, RWF, ZAR, INR), locked-in FX rates, and online limits from UGX 7M up to 30M.</p></div>
         </div>
+        <button class="btn compare-these" data-use="online">Compare these →</button>
         <div class="avoid">
           <h4>⚠️ Avoid for online and international card shopping: Centenary Bank</h4>
           <p>The 2026 tariff guide charges UGX 2,000 for a domestic online card payment and 2.5% + 5% FX mark-up on international e-commerce.</p>
@@ -442,9 +435,9 @@ footer{padding:36px 0 60px;font-size:.82rem;color:var(--muted)}
     <h2>What should you actually join?</h2>
     <p class="lead">The smartest setup in Uganda is usually one everyday local bank plus one strong digital or FX bank. Both can cost UGX 0 a month.</p>
     <div class="verdict">
-      <div class="v"><div class="n">1</div><h3>One bank for everything</h3><p>Personal, online and a side business: <b style="color:#fff">Absa</b> (Flexi + Multi-Currency Virtual Card) or <b style="color:#fff">Equity</b> (UGX Ordinary + USD account with Visa USD Gold).</p></div>
-      <div class="v"><div class="n">2</div><h3>Salary, heavy transfers, formal company</h3><p><b style="color:#fff">Stanbic</b>: Everyday or Karibu for personal; Business Online for companies.</p></div>
-      <div class="v"><div class="n">3</div><h3>Low fees, no queues, cheap ATMs</h3><p><b style="color:#fff">I&amp;M</b> or <b style="color:#fff">KCB</b> pay-as-you-transact accounts.</p></div>
+      <div class="v"><div class="n">1</div><h3>One bank for everything</h3><p>Personal, online and a side business: <b>Absa</b> (Flexi + Multi-Currency Virtual Card) or <b>Equity</b> (UGX Ordinary + USD account with Visa USD Gold).</p></div>
+      <div class="v"><div class="n">2</div><h3>Salary, heavy transfers, formal company</h3><p><b>Stanbic</b>: Everyday or Karibu for personal; Business Online for companies.</p></div>
+      <div class="v"><div class="n">3</div><h3>Low fees, no queues, cheap ATMs</h3><p><b>I&amp;M</b> or <b>KCB</b> pay-as-you-transact accounts.</p></div>
     </div>
     <div class="combo">Suggested combo: <b>Stanbic or Equity</b> for everyday local banking, plus <b>Absa or I&amp;M</b> for online and FX.</div>
   </div>
@@ -457,12 +450,12 @@ footer{padding:36px 0 60px;font-size:.82rem;color:var(--muted)}
     <h2>What we checked against official tariffs</h2>
     <p class="lead">Where a figure in the original summary differed from a published bank document, it's flagged here.</p>
     <div class="checks">
-      <div class="check"><span class="who">Stanbic ✓</span><span>The March 2026 Personal &amp; Private Banking guide confirms Everyday Banking is free, plus account fees of 6,500 and 8,500 and a 17,500 bi-annual Classic Visa fee. It also lists a 7% currency-conversion fee, which is used in the chart above.</span></div>
+      <div class="check"><span class="who">Stanbic ✓</span><span>The March 2026 Personal &amp; Private Banking guide confirms Everyday Banking is free, plus account fees of 6,500 and 8,500 and a 17,500 bi-annual Classic Visa fee. It also lists a 7% currency-conversion fee.</span></div>
       <div class="check"><span class="who">Equity ✓</span><span>Equity Bank Uganda confirmed on X that ATM withdrawals cost UGX 1,200 for amounts up to UGX 2 million.</span></div>
-      <div class="check"><span class="who">I&amp;M ✓</span><span>I&amp;M's tariff guide lists UGX 2,500 for withdrawals at non-I&amp;M local ATMs and UGX 10,000 at international ATMs.</span></div>
+      <div class="check"><span class="who">I&amp;M ✓</span><span>I&amp;M's tariff guide lists UGX 2,500 at non-I&amp;M local ATMs and UGX 10,000 at international ATMs.</span></div>
       <div class="check"><span class="who">Exim ⚠</span><span>The Exim tariff sheet lists an <b>ATM access fee of UGX 1,000</b> for Exim cards (2,000 at Interswitch, 7,000 at other Visa ATMs). The original summary said UGX 700, so this page uses 1,000.</span></div>
-      <div class="check"><span class="who">KCB ⚠</span><span>KCB's corporate tariff guide (Nov 2025) lists UGX 3,000 for KCB-to-KCB transfers and <b>UGX 5,000 for EFT to other banks</b>. The UGX 3,000 EFT in the summary may apply only to some channels or account types.</span></div>
-      <div class="check"><span class="who">NCBA ⚠</span><span>The newest NCBA Uganda tariff found online is the 2024 edition. Its corporate guide lists outward RTGS at UGX 25,000 at a branch. The UGX 10,000 figure here is the mobile RTGS rate in the summary.</span></div>
+      <div class="check"><span class="who">KCB ⚠</span><span>KCB's corporate tariff guide (Nov 2025) lists UGX 3,000 for KCB-to-KCB transfers and <b>UGX 5,000 for EFT to other banks</b>. The UGX 3,000 EFT may apply only to some channels or account types.</span></div>
+      <div class="check"><span class="who">NCBA ⚠</span><span>The newest NCBA Uganda tariff found online is the 2024 edition. Its corporate guide lists outward RTGS at UGX 25,000 at a branch; UGX 10,000 here is the mobile RTGS rate.</span></div>
       <div class="check"><span class="who">Absa ⓘ</span><span>Absa's retail, business and corporate guides are published on absa.co.ug but weren't reviewed line by line for this page.</span></div>
     </div>
   </div>
@@ -476,10 +469,10 @@ footer{padding:36px 0 60px;font-size:.82rem;color:var(--muted)}
     <p class="lead">Always confirm against the latest guide on the bank's website. Banks revise tariffs several times a year.</p>
     <ol class="sources">
       <li><a href="https://www.stanbicbank.co.ug/static_file/Uganda/Downloadable%20files/Pricing%20Guide/2026%20-%20Pricing%20Guide/2026%20Personal%20&amp;%20Private%20Banking%20Tariff%20Guide.pdf" target="_blank" rel="noopener">Stanbic Bank Uganda: 2026 Personal &amp; Private Banking Tariff Guide</a><br><small>Effective 27 March 2026</small></li>
-      <li><a href="https://www.stanbicbank.co.ug/uganda/personal" target="_blank" rel="noopener">Stanbic Bank Uganda: Personal Banking</a><br><small>Everyday Banking account page</small></li>
+      <li><a href="https://www.stanbicbank.co.ug/uganda/personal" target="_blank" rel="noopener">Stanbic Bank Uganda: Personal Banking</a></li>
       <li><a href="https://equitygroupholdings.com/ug/images/docs/Retail-Banking-Tariff-Guide-2025.pdf" target="_blank" rel="noopener">Equity Bank Uganda: Retail Banking Tariff Guide</a><br><small>Linked by @UgEquityBank</small></li>
-      <li><a href="https://x.com/UgEquityBank/status/1975601958091124876" target="_blank" rel="noopener">Equity Bank Uganda on X: ATM withdrawal fee confirmation</a></li>
-      <li><a href="https://www.absa.co.ug/tariff-guide/" target="_blank" rel="noopener">Absa Bank Uganda: Tariff guide</a><br><small>Personal, business and corporate guides</small></li>
+      <li><a href="https://x.com/UgEquityBank/status/1975601958091124876" target="_blank" rel="noopener">Equity Bank Uganda on X: ATM fee confirmation</a></li>
+      <li><a href="https://www.absa.co.ug/tariff-guide/" target="_blank" rel="noopener">Absa Bank Uganda: Tariff guide</a></li>
       <li><a href="https://www.centenarybank.co.ug/dcs/Tariff-guide-2026.pdf" target="_blank" rel="noopener">Centenary Bank: Tariff Guide 2026</a></li>
       <li><a href="https://ug.kcbgroup.com/download-report?document=corporate-tariff-guide-q3-november-2025.pdf" target="_blank" rel="noopener">KCB Bank Uganda: Corporate Tariff Guide</a><br><small>Effective 20 November 2025</small></li>
       <li><a href="https://www.imbankgroup.com/ug/wp-content/uploads/sites/5/2026/01/IM-tariff-guide-2026.pdf" target="_blank" rel="noopener">I&amp;M Bank Uganda: Tariff Guide 2026</a></li>
@@ -500,30 +493,30 @@ footer{padding:36px 0 60px;font-size:.82rem;color:var(--muted)}
       <div>
         <div class="kicker">Help keep this accurate</div>
         <h2>Suggest a correction</h2>
-        <p>Banks change tariffs often. If a figure is out of date or wrong, tell us. Fill in the form and your email app opens with a ready-to-send message.</p>
+        <p>Banks change tariffs often. If a figure is out of date or wrong, tell us. Fill in the form and your email app opens with a ready-to-send message to <a href="mailto:info@musabadru.com" style="color:var(--gold)">info@musabadru.com</a>.</p>
         <p>Including a link to the official tariff guide, or a photo of a branch notice, lets us verify the change quickly.</p>
       </div>
       <form id="fix-form" novalidate>
         <div class="row">
-          <div><label for="f-bank">Bank</label>
-            <select id="f-bank" required>
+          <div><label for="c-bank">Bank</label>
+            <select id="c-bank">
               <option>Stanbic</option><option>Equity</option><option>Absa</option><option>Centenary</option>
               <option>KCB</option><option>I&amp;M</option><option>NCBA</option><option>Exim</option><option>General / other</option>
             </select></div>
-          <div><label for="f-field">What's wrong?</label>
-            <select id="f-field">
+          <div><label for="c-field">What's wrong?</label>
+            <select id="c-field">
               <option>Monthly fee</option><option>ATM withdrawal fee</option><option>EFT / RTGS fee</option>
               <option>Card / online / FX fee</option><option>Category winner or recommendation</option><option>Broken source link</option><option>Other</option>
             </select></div>
         </div>
         <div class="row">
-          <div><label for="f-shown">Value shown on this page</label><input id="f-shown" placeholder="e.g. UGX 1,400"></div>
-          <div><label for="f-correct">Correct value</label><input id="f-correct" placeholder="e.g. UGX 1,500"></div>
+          <div><label for="c-shown">Value shown on this page</label><input id="c-shown" placeholder="e.g. UGX 1,400"></div>
+          <div><label for="c-correct">Correct value</label><input id="c-correct" placeholder="e.g. UGX 1,500"></div>
         </div>
-        <label for="f-source">Source link (tariff guide, notice, etc.)</label>
-        <input id="f-source" type="url" placeholder="https://…">
-        <label for="f-notes">Notes</label>
-        <textarea id="f-notes" placeholder="Account type, effective date, anything that helps us verify"></textarea>
+        <label for="c-source">Source link (tariff guide, notice, etc.)</label>
+        <input id="c-source" type="url" inputmode="url" placeholder="https://…">
+        <label for="c-notes">Notes</label>
+        <textarea id="c-notes" placeholder="Account type, effective date, anything that helps us verify"></textarea>
         <div class="form-actions">
           <button type="submit" class="btn solid">Open email to send correction</button>
           <small>Opens your email app. Nothing is sent until you press send.</small>
@@ -541,35 +534,262 @@ footer{padding:36px 0 60px;font-size:.82rem;color:var(--muted)}
 </footer>
 
 <script>
-  // Address that receives correction emails
-  const CORRECTIONS_EMAIL = "info@musabadru.com";
+const CORRECTIONS_EMAIL = "info@musabadru.com";
 
-  const form = document.getElementById('fix-form');
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    const v = id => document.getElementById(id).value.trim();
-    const bank = v('f-bank');
-    const subject = `Correction: ${bank}, ${v('f-field')}`;
-    const body = [
-      `Bank: ${bank}`,
-      `Field: ${v('f-field')}`,
-      `Shown on page: ${v('f-shown') || '-'}`,
-      `Correct value: ${v('f-correct') || '-'}`,
-      `Source: ${v('f-source') || '-'}`,
-      '',
-      `Notes: ${v('f-notes') || '-'}`,
-      '',
-      `Page: ${location.href}`
-    ].join('\n');
-    location.href = `mailto:${CORRECTIONS_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+/* ---------- DATA ---------- */
+// Numeric fields drive sorting and charts (null = not stated in source)
+const BANKS = [
+  { id:"stanbic", name:"Stanbic", full:"Stanbic Bank Uganda", c:"var(--stanbic)", guide:"Mar 2026", guideLong:"Tariff guide effective 27 March 2026",
+    monthly:0, atm:1400, eft:2000, rtgs:10000, fx:7, fxTxt:"7%",
+    t:{ monthly:"<b>0</b> Everyday Banking<br>6,500 Karibu Salary<br>8,500 SMART", atm:"<b>1,400</b> (≤500k)<br>2,000 (&gt;500k)", eft:"<b>2,000</b> EFT<br><b>10,000</b> RTGS", card:"Bi-annual Visa fee 17,500 (Classic); 5,000 on Everyday Banking. 7% currency conversion. FlexiPay wallet.", strength:"Cheapest online EFTs, largest asset base, nationwide ATM and branch network" },
+    kv:[["Monthly fee","UGX 0"],["ATM on-us","1,400"],["Online EFT","2,000"],["RTGS","10,000"]],
+    pros:["Uganda's largest bank by assets, with the widest ATM network","Cheapest online EFTs (UGX 2,000)","Karibu Salary (6,500) and SMART (8,500) bundle free ATM use and SMS alerts","Business Online, cash-in-transit, POS and trade finance are industry standard"],
+    cons:["7% currency-conversion fee on card spend abroad","Corporate current accounts cost UGX 35,000/month"],
+    badge:["ok","Source checked"], src:"https://www.stanbicbank.co.ug/static_file/Uganda/Downloadable%20files/Pricing%20Guide/2026%20-%20Pricing%20Guide/2026%20Personal%20&%20Private%20Banking%20Tariff%20Guide.pdf",
+    tags:["Personal","Salary","Business"] },
+  { id:"equity", name:"Equity", full:"Equity Bank Uganda", c:"var(--equity)", guide:"May 2026", guideLong:"Tariff guide May 2026",
+    monthly:0, atm:1200, eft:5200, rtgs:10000, fx:0, fxTxt:"Free*",
+    t:{ monthly:"<b>0</b> Standard Savings/Current &amp; FCY", atm:"<b>1,200</b> (up to 2M)<br>USD 0.30 on USD Gold", eft:"5,200 EFT (3,000 Corp IB)<br><b>10,000</b> online RTGS", card:"Visa Debit online/POS <b>free</b>; USD Gold card (USD 10) good for online.", strength:"Zero monthly fees on UGX and USD accounts; Equity Duuka agents (free deposits)" },
+    kv:[["Monthly fee","UGX 0"],["ATM on-us","1,200"],["Online EFT","5,200"],["RTGS","10,000"]],
+    pros:["No monthly fee and no minimum balance on UGX and USD accounts","Free cash deposits at thousands of Equity Duuka agents","Visa USD Gold debit (USD 10) with free online/POS spend","Cross-border transfers (KE, TZ, RW, DRC, SS) of USD 3–6 on Corporate IB"],
+    cons:["Over-the-counter branch withdrawals cost UGX 10,000–30,000","Branches can be crowded","Highest retail online EFT of the group (5,200)"],
+    badge:["ok","Source checked"], src:"https://equitygroupholdings.com/ug/images/docs/Retail-Banking-Tariff-Guide-2025.pdf",
+    tags:["Personal","USD","SME"] },
+  { id:"absa", name:"Absa", full:"Absa Bank Uganda", c:"var(--absa)", guide:"Jan 2025 + Dec 2025", guideLong:"Tariff guide Jan 2025 + Dec 2025 digital update",
+    monthly:0, atm:1200, eft:4000, rtgs:10000, fx:6, fxTxt:"6%",
+    t:{ monthly:"<b>0</b> Flexi PAYT<br>4,000 Access Plus<br>8,500 Salary", atm:"<b>1,200</b><br>free on Salary/bundles", eft:"<b>4,000</b> EFT<br><b>10,000</b> RTGS", card:"6% FX fee on the UGX debit card, but the Multi-Currency Virtual Card (USD/EUR/GBP/ZAR) avoids it.", strength:"Best digital app, virtual multi-currency cards, Absa Pay by Link for SMEs" },
+    kv:[["Monthly fee","UGX 0"],["ATM on-us","1,200"],["Online EFT","4,000"],["RTGS","10,000"]],
+    pros:["Widely rated as the smoothest mobile and internet banking","Multi-Currency Virtual Card (UGX, USD, EUR, GBP, ZAR)","Absa Pay by Link: get paid by any Visa card with no website or POS","Business Access Account from UGX 10,000/month"],
+    cons:["6% international fee on the standard UGX debit card"],
+    badge:["warn","Guide not reviewed"], src:"https://www.absa.co.ug/tariff-guide/",
+    tags:["Digital","FX","SME"] },
+  { id:"centenary", name:"Centenary", full:"Centenary Bank", c:"var(--cente)", guide:"Feb 2026", guideLong:"Tariff guide 2026 (Feb)",
+    monthly:3000, atm:1200, eft:3000, eftTxt:"3,000+", rtgs:10000, fx:7.5, fxTxt:"7.5%",
+    t:{ monthly:"<b>3,000</b> Ordinary Savings<br>0 CentePlus / Diaspora", atm:"<b>1,200</b> (≤1M)<br>2,000 (1M–2M)", eft:"3,000–7,000 EFT<br><b>10,000</b> online RTGS", card:"Costly online: 2,000 domestic online fee; 2.5% + 5% FX mark-up internationally.", strength:"Best upcountry reach (80+ branches plus agents); microfinance and agri loans" },
+    kv:[["Monthly fee","3,000"],["ATM on-us","1,200"],["Online EFT","3,000–7,000"],["RTGS","10,000"]],
+    pros:["Best upcountry reach: 80+ branches plus agents","Strong in microfinance and agricultural loans","CentePlus and Diaspora accounts have no monthly fee"],
+    cons:["UGX 2,000 fee on domestic online card payments","2.5% + 5% FX mark-up (7.5%) on international e-commerce","Regular transactions can trigger per-entry charges"],
+    badge:["ok","Source checked"], src:"https://www.centenarybank.co.ug/dcs/Tariff-guide-2026.pdf",
+    tags:["Upcountry","Agri loans"] },
+  { id:"kcb", name:"KCB", full:"KCB Bank Uganda", c:"var(--kcb)", guide:"Jun 2026", guideLong:"Tariff guide Jun 2026",
+    monthly:0, atm:1500, eft:3000, rtgs:15000, fx:null, fxTxt:"n/a",
+    t:{ monthly:"<b>0</b> Smart UGX &amp; PAYT Current<br>15,000 Bundled", atm:"<b>1,500</b><br>1,000 cardless", eft:"<b>3,000</b> EFT<br>15,000 RTGS", card:"2,000/month Visa debit fee; cheap domestic off-us Visa ATM (5,000).", strength:"UGX 0 monthly fee even on Corporate PAYT; strong East Africa network" },
+    kv:[["Monthly fee","UGX 0"],["ATM on-us","1,500"],["Online EFT","3,000"],["RTGS","15,000"]],
+    pros:["Corporate Pay-As-You-Go account: UGX 0 monthly, no minimum balance","Bulk mobile-money payouts at UGX 2,000 per entry","Cardless withdrawal UGX 1,000; off-us Visa ATM UGX 5,000","Strong East Africa trade network"],
+    cons:["UGX 2,000/month Visa debit card fee","Highest RTGS of the group (15,000)"],
+    badge:["warn","See fact-check"], src:"https://ug.kcbgroup.com/download-report?document=corporate-tariff-guide-q3-november-2025.pdf",
+    tags:["SME","EA trade","Low fees"] },
+  { id:"im", name:"I&M", full:"I&M Bank Uganda", c:"var(--im)", guide:"Jan/Oct 2026", guideLong:"Tariff guide 2026 (Jan, revised Oct)",
+    monthly:3000, atm:1000, eft:null, rtgs:10000, fx:6, fxTxt:"6%",
+    t:{ monthly:"<b>3,000</b> Paygo (free insurance)<br>10,500 Bundled", atm:"<b>1,000</b><br>non-I&amp;M local ATM 2,500", eft:"<b>10,000</b> online RTGS", card:"6% issuer FX fee on UGX cards, but Multi-Currency Mastercard Prepaid (9 currencies).", strength:"Lowest local ATM fees (on-us and off-us), shorter queues, good prepaid FX card" },
+    kv:[["Monthly fee","3,000"],["ATM on-us","1,000"],["Off-us local ATM","2,500"],["RTGS","10,000"]],
+    pros:["Lowest local ATM fees, both own and other banks' ATMs","Paygo account: no minimum balance, includes free insurance","Multi-Currency Mastercard Prepaid: 9 currencies, open to non-customers","Default online limit UGX 7M, expandable to 30M; shorter queues"],
+    cons:["6% issuer FX fee on UGX cards used abroad"],
+    badge:["ok","Source checked"], src:"https://www.imbankgroup.com/ug/wp-content/uploads/sites/5/2026/01/IM-tariff-guide-2026.pdf",
+    tags:["Low fees","Prepaid FX","Personal"] },
+  { id:"ncba", name:"NCBA", full:"NCBA Bank Uganda", c:"var(--ncba)", guide:"2026", guideLong:"Tariff guide 2026",
+    monthly:15000, atm:null, eft:null, rtgs:10000, fx:null, fxTxt:"n/a",
+    t:{ monthly:"<b>15,000</b> Gold PAYT<br>25,000 Gold Bundled", atm:"Free or per tier on bundles (5M daily limit)", eft:"<b>10,000</b> mobile RTGS", card:"High-limit Visa Platinum/Classic credit and debit cards; NCBA NOW app.", strength:"Best for asset finance (vehicles, machinery), high limits, premier and corporate clients" },
+    kv:[["Monthly fee","15,000"],["ATM","Per tier"],["Daily ATM limit","5M"],["Mobile RTGS","10,000"]],
+    pros:["Best for asset finance: trucks, cars, machinery, leasing","High-limit Visa Platinum and Classic credit and debit cards","Strong with premier and corporate clients; NCBA NOW app"],
+    cons:["Most expensive entry account (Gold PAYT UGX 15,000/month)","Latest Uganda tariff guide online is the 2024 edition"],
+    badge:["warn","See fact-check"], src:"https://ncbagroup.com/ug/resource-downloads/2/",
+    tags:["Asset finance","Corporate"] },
+  { id:"exim", name:"Exim", full:"Exim Bank Uganda", c:"var(--exim)", guide:"2025/2026", guideLong:"Tariff guide 2025/2026",
+    monthly:0, atm:1000, atmTxt:"1,000*", eft:null, rtgs:null, fx:null, fxTxt:"n/a",
+    t:{ monthly:"<b>0</b> Basic Savings / Student<br>25,000 Single Fee", atm:"<b>1,000</b> per tariff sheet*<br>2,000 Interswitch", eft:"Standard EFT/RTGS + Exim Global Pay", card:"Visa/Mastercard; updated Exim Mobile app (MTN/Airtel push and pull).", strength:"Cheap ATM fee, strong FX/treasury desk, good for Uganda–Tanzania trade" },
+    kv:[["Monthly fee","UGX 0"],["ATM on-us","1,000*"],["Interswitch ATM","2,000"],["Cross-border","Global Pay"]],
+    pros:["Basic Savings and Student accounts are free","Responsive FX and treasury desk","Good for Uganda–Tanzania import and export","Exim Global Pay (with TerraPay) for cheaper cross-border remittances"],
+    cons:["Single Fee account costs UGX 25,000/month","Visa domestic ATM (other banks) UGX 7,000"],
+    badge:["warn","See fact-check"], src:"https://api.eximbank-ug.com/storage/documents/ovG0RrrkSm2qUCibFRN92oBAtNfEXUewVqJuqfde.pdf",
+    tags:["Tanzania trade","FX desk"] },
+];
+
+const USES = [
+  { id:"all", label:"Everything", banks:BANKS.map(b=>b.id) },
+  { id:"personal", label:"👤 Personal", banks:["equity","stanbic","im","centenary"] },
+  { id:"business", label:"💼 Business", banks:["stanbic","equity","kcb","absa","ncba","exim"] },
+  { id:"online", label:"🌐 Online & FX", banks:["absa","equity","im"] },
+  { id:"lowfee", label:"💸 Lowest fees", banks:["equity","kcb","im","exim","stanbic"] },
+  { id:"upcountry", label:"🌾 Upcountry", banks:["centenary","equity"] },
+  { id:"trade", label:"🚚 Regional trade", banks:["equity","kcb","exim","stanbic"] },
+];
+
+const CHARTS = [
+  { key:"monthly", title:"Entry personal monthly fee", cap:"Cheapest everyday personal account each bank offers",
+    fmt:b=>b.monthly===0?"Free":b.monthly.toLocaleString(), note:"Centenary's CentePlus and Diaspora accounts are also UGX 0. I&amp;M's UGX 3,000 Paygo includes free insurance. NCBA's figure is its Gold PAYT account." },
+  { key:"atm", title:"On-us ATM withdrawal", cap:"Own card at the bank's own ATM, smallest withdrawal band",
+    fmt:b=>b.atmTxt||b.atm.toLocaleString(), note:"*Exim's tariff sheet lists UGX 1,000; the original summary said 700 (see <a href='#checks'>fact-check</a>). KCB cardless withdrawal is UGX 1,000. NCBA bundles ATM use into account tiers." },
+  { key:"eft", title:"Outward online EFT", cap:"Sending to another Ugandan bank via internet or mobile banking",
+    fmt:b=>b.eftTxt||b.eft.toLocaleString(), note:"Centenary ranges UGX 3,000–7,000 by amount. Equity Corporate IB EFTs are UGX 3,000. Online RTGS is UGX 10,000 at most banks and 15,000 at KCB." },
+  { key:"fx", title:"International online card cost", cap:"FX or cross-border fee when paying a foreign website (%)",
+    fmt:b=>b.fxTxt, note:"*Equity's Visa USD Gold card (USD 10) charges no online/POS fee, but it's loaded in USD. Absa's Multi-Currency Virtual Card and I&amp;M's Prepaid Card avoid the 6% if pre-loaded in the right currency. Centenary is 2.5% plus a 5% FX mark-up." },
+];
+
+/* ---------- STATE ---------- */
+const state = { selected:new Set(BANKS.map(b=>b.id)), use:"all", zero:false, sort:"name" };
+const $ = s => document.querySelector(s);
+const esc = s => s.replace(/&(?!amp;|lt;|gt;)/g,"&amp;");
+
+function visible(){
+  let list = BANKS.filter(b => state.selected.has(b.id) && (!state.zero || b.monthly===0));
+  return sortList(list, state.sort);
+}
+function sortList(list, key){
+  return [...list].sort((a,b)=>{
+    if(key==="name") return a.name.localeCompare(b.name);
+    const x=a[key], y=b[key];
+    if(x==null && y==null) return a.name.localeCompare(b.name);
+    if(x==null) return 1; if(y==null) return -1;
+    return x-y || a.name.localeCompare(b.name);
   });
+}
 
-  // "Report an error" buttons pre-select the bank and jump to the form
-  document.querySelectorAll('[data-bank]').forEach(b => b.addEventListener('click', () => {
-    document.getElementById('f-bank').value = b.dataset.bank;
-    document.getElementById('correct').scrollIntoView({behavior:'smooth'});
-    setTimeout(() => document.getElementById('f-field').focus(), 500);
-  }));
+/* ---------- RENDER ---------- */
+function renderControls(){
+  const uses = document.querySelector('.fb-row.uses');
+  uses.querySelectorAll('.chip').forEach(n=>n.remove());
+  USES.forEach(u=>{
+    const b=document.createElement('button');
+    b.type="button"; b.className="chip"; b.textContent=u.label;
+    b.setAttribute('aria-pressed', state.use===u.id);
+    b.onclick=()=>applyUse(u.id);
+    uses.appendChild(b);
+  });
+  const row = document.querySelector('.fb-row.banks-row');
+  row.querySelectorAll('.chip').forEach(n=>n.remove());
+  BANKS.forEach(bk=>{
+    const b=document.createElement('button');
+    b.type="button"; b.className="chip bk"; b.style.setProperty('--c',bk.c);
+    b.innerHTML=`<span class="dot"></span>${esc(bk.name)}`;
+    b.setAttribute('aria-pressed', state.selected.has(bk.id));
+    b.onclick=()=>{
+      state.selected.has(bk.id)?state.selected.delete(bk.id):state.selected.add(bk.id);
+      state.use = matchUse(); update();
+    };
+    row.appendChild(b);
+  });
+  $('#f-zero').checked=state.zero;
+  $('#f-sort').value=state.sort;
+}
+function matchUse(){
+  const sel=[...state.selected].sort().join();
+  const u=USES.find(u=>[...u.banks].sort().join()===sel);
+  return u?u.id:null;
+}
+function applyUse(id){
+  state.use=id; state.selected=new Set(USES.find(u=>u.id===id).banks); update();
+}
+
+function renderCharts(list){
+  const grid=$('#charts-grid'); grid.innerHTML="";
+  if(!list.length){ grid.innerHTML=`<div class="empty" style="grid-column:1/-1">No banks match these filters. <button class="btn" onclick="applyUse('all')">Reset filters</button></div>`; return; }
+  CHARTS.forEach(ch=>{
+    const max=Math.max(...BANKS.map(b=>b[ch.key]??0));
+    const ordered = state.sort==="name" ? list : sortList(list, ch.key);
+    const vals = list.map(b=>b[ch.key]).filter(v=>v!=null);
+    const min = vals.length?Math.min(...vals):null;
+    const rows = ordered.map(b=>{
+      const v=b[ch.key]; const na=v==null;
+      const cls=["bar", v===0?"zero":"", na?"na":"", (!na && v===min && list.length>1)?"best":""].join(" ");
+      return `<div class="${cls}"><span class="lbl">${esc(b.name)}</span><div class="track"><div class="fill" style="width:${na?0:(max?v/max*100:0)}%;--c:${b.c}"></div></div><span class="val">${na?"not stated":ch.fmt(b)}</span></div>`;
+    }).join("");
+    grid.insertAdjacentHTML('beforeend',`<div class="chart"><h3>${ch.title}</h3><p class="cap">${ch.cap}</p>${rows}<p class="legend-note">${ch.note}</p></div>`);
+  });
+}
+
+function renderTable(list){
+  const tb=$('#table-body');
+  if(!list.length){ tb.innerHTML=`<tr><td colspan="6" style="text-align:center;color:var(--muted)">No banks match these filters.</td></tr>`; return; }
+  tb.innerHTML=list.map(b=>`<tr>
+    <td><span class="bank-dot" style="background:${b.c}"></span><b>${esc(b.name)}</b> <small>${b.guide}</small></td>
+    <td data-label="Monthly fee"><div>${b.t.monthly}</div></td>
+    <td data-label="ATM (on-us)"><div>${b.t.atm}</div></td>
+    <td data-label="EFT / RTGS"><div>${b.t.eft}</div></td>
+    <td data-label="Cards & online"><div>${b.t.card}</div></td>
+    <td data-label="Strength"><div>${b.t.strength}</div></td></tr>`).join("");
+  document.querySelectorAll('thead [data-sort]').forEach(btn=>btn.dataset.active = btn.dataset.sort===state.sort);
+}
+
+function renderCards(list){
+  const wrap=$('#bank-cards');
+  if(!list.length){ wrap.innerHTML=`<div class="empty">No banks match these filters.</div>`; return; }
+  wrap.innerHTML=list.map(b=>`<article class="bank" style="--c:${b.c}">
+    <div class="head"><h3>${esc(b.full)}</h3><small>${b.guideLong}</small><div class="tags">${b.tags.map(t=>`<span>${t}</span>`).join("")}</div></div>
+    <div class="body">
+      <div class="kv">${b.kv.map(([k,v])=>`<div><span>${k}</span><b>${v}</b></div>`).join("")}</div>
+      <ul class="pros">${b.pros.map(p=>`<li>${esc(p)}</li>`).join("")}</ul>
+      <ul class="cons">${b.cons.map(p=>`<li>${esc(p)}</li>`).join("")}</ul>
+    </div>
+    <div class="foot"><span class="badge ${b.badge[0]}">${b.badge[1]}</span><a href="${b.src}" target="_blank" rel="noopener">Tariff guide ↗</a><button class="btn" data-report="${esc(b.name)}">Report an error</button></div>
+  </article>`).join("");
+  wrap.querySelectorAll('[data-report]').forEach(btn=>btn.onclick=()=>{
+    $('#c-bank').value=btn.dataset.report.replace('&amp;','&');
+    $('#correct').scrollIntoView({behavior:'smooth'});
+    setTimeout(()=>$('#c-field').focus({preventScroll:true}),500);
+  });
+}
+
+function renderStatus(list){
+  const n=list.length;
+  const useLabel = state.use ? USES.find(u=>u.id===state.use).label.replace(/^\S+\s/,'') : 'custom pick';
+  $('#fb-status').innerHTML=`Showing <b>${n}</b> of ${BANKS.length} banks`;
+  $('#fb-sum').textContent = n===BANKS.length && !state.zero ? `All ${BANKS.length} banks` :
+     `${n} bank${n===1?"":"s"} · ${state.use==='all'?'':useLabel}${state.zero?' · UGX 0 fee':''}`.replace(/ · $/,'');
+  $('#fb-done').textContent = `Show ${n} result${n===1?"":"s"}`;
+}
+
+function syncURL(){
+  const p=new URLSearchParams();
+  if(state.selected.size!==BANKS.length) p.set('banks',[...state.selected].join(','));
+  if(state.zero) p.set('zero','1');
+  if(state.sort!=='name') p.set('sort',state.sort);
+  const q=p.toString().replace(/%2C/g,',');
+  history.replaceState(null,'',location.pathname+(q?'?'+q:'')+location.hash);
+}
+function readURL(){
+  const p=new URLSearchParams(location.search);
+  if(p.get('banks')){ const ids=p.get('banks').split(',').filter(id=>BANKS.some(b=>b.id===id)); if(ids.length) state.selected=new Set(ids); }
+  state.zero=p.get('zero')==='1';
+  if(['name','monthly','atm','eft','fx'].includes(p.get('sort'))) state.sort=p.get('sort');
+  state.use=matchUse();
+}
+
+function update(){
+  const list=visible();
+  renderControls(); renderCharts(list); renderTable(list); renderCards(list); renderStatus(list); syncURL();
+}
+
+/* ---------- EVENTS ---------- */
+$('#f-zero').onchange=e=>{state.zero=e.target.checked; update();};
+$('#f-sort').onchange=e=>{state.sort=e.target.value; update();};
+$('#f-all').onclick=()=>applyUse('all');
+$('#f-share').onclick=async e=>{
+  try{ await navigator.clipboard.writeText(location.href); e.target.textContent='Link copied ✓'; }
+  catch{ prompt('Copy this link:',location.href); }
+  setTimeout(()=>e.target.textContent='Copy link to this comparison',2000);
+};
+document.querySelectorAll('thead [data-sort]').forEach(btn=>btn.onclick=()=>{state.sort=btn.dataset.sort; update();});
+
+const fb=$('#filterbar'), tog=$('#fb-toggle');
+function setOpen(o){ fb.dataset.open=o; tog.setAttribute('aria-expanded',o); }
+tog.onclick=()=>setOpen(fb.dataset.open!=="true");
+$('#fb-done').onclick=()=>{ setOpen(false); $('#charts').scrollIntoView({behavior:'smooth'}); };
+
+document.querySelectorAll('.compare-these').forEach(btn=>btn.onclick=()=>{
+  applyUse(btn.dataset.use);
+  $('#charts').scrollIntoView({behavior:'smooth'});
+});
+
+$('#fix-form').addEventListener('submit',e=>{
+  e.preventDefault();
+  const v=id=>$('#'+id).value.trim();
+  const subject=`Correction: ${v('c-bank')}, ${v('c-field')}`;
+  const body=[`Bank: ${v('c-bank')}`,`Field: ${v('c-field')}`,`Shown on page: ${v('c-shown')||'-'}`,`Correct value: ${v('c-correct')||'-'}`,`Source: ${v('c-source')||'-'}`,'',`Notes: ${v('c-notes')||'-'}`,'',`Page: ${location.href}`].join('\n');
+  location.href=`mailto:${CORRECTIONS_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+});
+
+readURL(); update();
 </script>
 </body>
 </html>
